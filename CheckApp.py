@@ -25,7 +25,7 @@ def find_coordinates(text):
     print(coordinates)
     return coordinates
 def search(img_path):
-    img = cv2.imread(img_path) #'D:\\Data\\Test\\maps\\sonya.jpg'
+    img = cv2.imread(img_path)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     text = pytesseract.image_to_string(img, config='outputbase digits')
     return text
