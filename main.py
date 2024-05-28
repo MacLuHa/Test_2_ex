@@ -8,7 +8,7 @@ from aiogram.filters import BaseFilter
 from aiogram.types import PhotoSize
 from dotenv import load_dotenv
 from FindGM_NW import FindGM,FindGM2, FindGM3
-from CheckApp import search,find_coordinates, ToGray
+from CheckApp import search,find_coordinates
 #FindGM = ResNet50
 #FindGM2 = MobileNet
 #FindGM3 = VGG19 (переобученная)
