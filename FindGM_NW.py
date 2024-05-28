@@ -19,7 +19,7 @@ def FindGM(image_path): #ResNet50
     prediction = model.predict(img_preprocessed)
     for classname in ['web_site','screen']:
         if classname in decode_predictions(prediction,top=3)[0][0]:
-            return find_coordinates(search(image_path))
+            return True
         else:
             pass
 
@@ -43,5 +43,4 @@ def FindGM3(image_path): #VGG19 Переобучение
     prediction = MODEL.predict(img_preprocessed)
     print(prediction)
     if prediction[0][0] > 0.75 or prediction[0][0] > prediction[0][1]:
-        return find_coordinates(search(image_path)), True
-        # return True
+        return True
