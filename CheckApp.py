@@ -1,7 +1,6 @@
 import pytesseract
 import cv2
 from PIL import Image
-# from FindGM_NW import FindGM,FindGM2
 
 pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
 def find_coordinates(text):
@@ -26,17 +25,10 @@ def find_coordinates(text):
     print(coordinates)
     return coordinates
 def search(img_path):
-    # Подключение фото
     img = cv2.imread(img_path) #'D:\\Data\\Test\\maps\\sonya.jpg'
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    # cv2.imshow('Result', img)
-    # cv2.waitKey(0)
-    # Будет выведен весь текст с цифрами
     text = pytesseract.image_to_string(img, config='outputbase digits')
     return text
 
-def ToGray(img):
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    return img
 
 
