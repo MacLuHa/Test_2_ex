@@ -37,7 +37,7 @@ def FindGM2(image_path): #MobileNet
     #Если вероятность того, что это нужный класс больше 0.75
     if prediction[0][0] > 0.75 or prediction[0][0] > prediction[0][1]:
         return True
-
+# accuracy: 0.9949 - loss: 0.0155 - precision: 0.9949 - recall: 0.9949
 def FindGM3(image_path): #VGG19 Переобучение
     MODEL = keras.models.load_model('modelGM_VGG.h5')
     img = image.load_img(image_path, target_size=(224, 224))
