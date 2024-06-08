@@ -21,7 +21,7 @@ def FindGM(image_path): #ResNet50
     #Здесь решил попробовать уже готовую модель
     for classname in ['web_site','screen']:
         if classname in decode_predictions(prediction,top=3)[0][0]:
-            return find_coordinates(search(image_path))
+            return True
         else:
             pass
 
